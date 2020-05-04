@@ -21,8 +21,8 @@ class Newton:
         except:
             raise Exception('Call solve first')
 
-f = lambda x : 1 + (3*x**3-5*x**2)/4
-df = lambda x : (9*x**2-10*x)/4
-newton = Newton()
-newton.solve(f, df, 0.1)
-newton.print_history()
+# f = lambda x : 1 + (3*x**3-5*x**2)/4
+# df = lambda x : (9*x**2-10*x)/4
+# newton = Newton()
+# newton.solve(f, df, 0.1)
+# newton.print_history()
