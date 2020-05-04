@@ -16,10 +16,9 @@ class Newton:
         self.table_ = DataFrame(self.table_, columns=['p_old', 'p_new', 'absolute error'])
         return p_new
     def print_history(self):
-        try:
-            print(self.table_)
-        except:
+        if not hasattr(self, 'table_'):
             raise Exception('Call solve first')
+        print(self.table_)
 
 # f = lambda x : 1 + (3*x**3-5*x**2)/4
 # df = lambda x : (9*x**2-10*x)/4

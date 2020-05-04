@@ -21,10 +21,9 @@ class Bisection:
         self.p_ = p
         return p
     def print_history(self):
-        try:
-            print(self.table_)
-        except:
+        if not hasattr(self, 'table_'):
             raise Exception('Call solve first')
+        print(self.table_)
 
 # f = lambda x : 3*(x+1)*(x-0.5)*(x-1)
 # (a, b) = (-1.25, 2.5)

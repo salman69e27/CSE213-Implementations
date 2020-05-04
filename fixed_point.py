@@ -14,10 +14,9 @@ class FixedPoint:
         self.table_ = DataFrame(self.table_, columns=['p', 'f(p)', 'absolute error'])
         return p
     def print_history(self):
-        try:
-            print(self.table_)
-        except:
+        if not hasattr(self, 'table_'):
             raise Exception('Call solve first')
+        print(self.table_)
 
 # fixed_point = FixedPoint()
 # f = lambda x : 1 + (3*x**3-5*x**2)/4
